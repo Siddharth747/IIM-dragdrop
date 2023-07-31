@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/IIM-dragdrop/static/css/main.7b4f53ed.css",
+    "main.js": "/IIM-dragdrop/static/js/main.bd4d2f1d.js",
+    "index.html": "/IIM-dragdrop/index.html",
+    "main.7b4f53ed.css.map": "/IIM-dragdrop/static/css/main.7b4f53ed.css.map",
+    "main.bd4d2f1d.js.map": "/IIM-dragdrop/static/js/main.bd4d2f1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b4f53ed.css",
+    "static/js/main.bd4d2f1d.js"
+  ]
+}
