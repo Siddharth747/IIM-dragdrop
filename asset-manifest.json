@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/IIM-dragdrop/static/css/main.01e832bf.css",
+    "main.css": "/IIM-dragdrop/static/css/main.23ab5cf2.css",
     "main.js": "/IIM-dragdrop/static/js/main.d2c10f64.js",
     "index.html": "/IIM-dragdrop/index.html",
-    "main.01e832bf.css.map": "/IIM-dragdrop/static/css/main.01e832bf.css.map",
+    "main.23ab5cf2.css.map": "/IIM-dragdrop/static/css/main.23ab5cf2.css.map",
     "main.d2c10f64.js.map": "/IIM-dragdrop/static/js/main.d2c10f64.js.map"
   },
   "entrypoints": [
-    "static/css/main.01e832bf.css",
+    "static/css/main.23ab5cf2.css",
     "static/js/main.d2c10f64.js"
   ]
 }
