@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
+
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './App.css'; 
 import db from './firebase';
+
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     font-family: 'Poppins', sans-serif;
+//     margin: 0;
+//     padding: 0;
+//   }
+// `;
+
 
 const items = [
   { id: '1', content: 'Torch with 4 battery-cells' },
@@ -135,5 +145,9 @@ const App = () => {
     </div>
   );
 };
+
+
+
+
 
 export default App;

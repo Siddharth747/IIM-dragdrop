@@ -3,20 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 8px;
-  margin-bottom: 8px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
+  height: 24px;
+  padding: 4px;
+  margin-bottom: 4px;
+  background-color: #29434e;
+  color: white;
   border-radius: 4px;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* CSS for the active state of draggable items */
 .draggable-item.is-dragging {
-  background-color: #fff;
-  border-color: #999;
+  background-color: #3a5765;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -24,14 +23,14 @@
 .droppable-area {
   min-height: 100px;
   padding: 8px;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  background-color: #182229;
+  border: 1px solid #29434e;
   border-radius: 4px;
 }
 
 /* CSS for the placeholder when dragging */
 .draggable-placeholder {
-  background-color: #e5e5e5;
+  background-color: #3a5765;
   border-radius: 4px;
   opacity: 0.6;
   transition: opacity 0.2s ease-in-out;
@@ -61,18 +60,212 @@
 
 .input-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .input-field {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
+  flex: 1;
+  padding: 10px;
+  margin: 8px;
   border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+/* CSS for the draggable items */
+.draggable-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 4px;
+  margin-bottom: 4px;
+  background-color: #29434e;
+  color: white;
   border-radius: 4px;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* CSS for the active state of draggable items */
+.draggable-item.is-dragging {
+  background-color: #3a5765;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS for the droppable area */
+.droppable-area {
+  min-height: 100px;
+  padding: 8px;
+  background-color: #182229;
+  border: 1px solid #29434e;
+  border-radius: 4px;
+}
+
+/* CSS for the placeholder when dragging */
+.draggable-placeholder {
+  background-color: #3a5765;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.app-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+/* CSS for the draggable items */
+.draggable-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 6px;
+  margin-bottom: 6px;
+  background-color: white;
+  color: #29434e;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for the active state of draggable items */
+.draggable-item.is-dragging {
+  background-color: #d1e1e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS for the droppable area */
+.droppable-area {
+  min-height: 100px;
+  padding: 8px;
+  background-color: #29434e;
+  border: 1px solid #314a5a;
+  border-radius: 4px;
+}
+
+/* CSS for the placeholder when dragging */
+.draggable-placeholder {
+  background-color: #d1e1e9;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.app-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
 .submit-container {
@@ -80,12 +273,66 @@
   justify-content: center;
 }
 
-.submit-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #3a5765; /* Set the background color to #3a5765 */
+  padding: 20px;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #3a5765;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Target label elements within the .input-container */
+.input-container label {
+  color: white; /* Set the text color to white for labels */
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* ... (other CSS rules) */
+
+
