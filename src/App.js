@@ -3,7 +3,6 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './App.css'; 
 import db from './firebase';
 
-
 const items = [
   { id: '1', content: 'Torch with 4 battery-cells' },
   { id: '2', content: 'Folding knife' },
@@ -25,6 +24,9 @@ const items = [
 
 const App = () => {
   const [dragItems, setDragItems] = useState(items);
+  const [name, setName] = useState('');
+  const [rollNumber, setRollNumber] = useState('');
+  const [session, setSession] = useState('');
 
   const onDragEnd = (result) => {
     if (!result.destination) return;
@@ -37,11 +39,18 @@ const App = () => {
   };
 
   const handleSubmit = () => {
-    const arrangedIndexes = dragItems.map((item) => item.id);
-    console.log(arrangedIndexes);
+    const arrangedContents = dragItems.map((item) => item.content);
+    console.log(arrangedContents);
   
-    // Store the arrangedIndexes to Firebase database
-    db.ref('arrangedIndexes').set(arrangedIndexes) // Use 'db' instead of 'database'
+    // Store the arrangedContents, user information, and session in Firebase database
+    const submissionData = {
+      name: name,
+      rollNumber: rollNumber,
+      session: session,
+      arrangedContents: arrangedContents,
+    };
+  
+    db.ref('submissions').push(submissionData)
       .then(() => {
         console.log('Data stored successfully.');
       })
@@ -49,10 +58,44 @@ const App = () => {
         console.error('Error storing data:', error);
       });
   };
+  
 
   return (
     <div className="app-container">
       <h1>Drag and Drop Items</h1>
+
+      <div className="input-container">
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="input-field"
+          />
+        </label>
+
+        <label>
+          Roll Number:
+          <input
+            type="text"
+            value={rollNumber}
+            onChange={(e) => setRollNumber(e.target.value)}
+            className="input-field"
+          />
+        </label>
+
+        <label>
+          Session:
+          <input
+            type="text"
+            value={session}
+            onChange={(e) => setSession(e.target.value)}
+            className="input-field"
+          />
+        </label>
+      </div>
+
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="items">
           {(provided) => (
@@ -83,9 +126,12 @@ const App = () => {
         </Droppable>
       </DragDropContext>
 
-      <button className="submit-button" onClick={handleSubmit}>
-        Submit
-      </button>
+
+      <div className="submit-container">
+        <button className="submit-button" onClick={handleSubmit}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 };
